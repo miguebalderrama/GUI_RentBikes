@@ -51,7 +51,7 @@ st.sidebar.markdown(
 )
 
 # Crear interfaz de usuario
-st.title("Sistema de Predicción de Bicicletas Compartidas")
+st.title("Sistema de Predicción de Bicicletas Compartidas (Seúl - Korea)")
 st.write("Ingrese los valores para hacer una predicción:")
 
 # Función para obtener datos en tiempo real (ejemplo con clima)
