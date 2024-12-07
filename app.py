@@ -16,7 +16,7 @@ try:
 except Exception as e:
     print("Error:", e)
 # Accede al token desde el archivo .env
-API_TOKEN = config(f"MY_API_TOKEN")
+API_TOKEN = config("MY_API_TOKEN")
 
 
 # Cargar el modelo guardado
