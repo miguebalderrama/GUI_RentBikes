@@ -14,7 +14,7 @@ API_TOKEN = os.getenv('MY_API_TOKEN')
 @st.cache_resource  # Para almacenar en caché el modelo
 def cargar_modelo():
     try:
-        with open("C:\\Users\\Miguel\\Desktop\\Interfaz Bike\\xgboost_model.pkl", "rb") as file:
+        with open("xgboost_model.pkl", "rb") as file:
             modelo = pickle.load(file)
         return modelo
     except FileNotFoundError:
@@ -28,7 +28,7 @@ xgboost_model = cargar_modelo()
 @st.cache_resource  # Para almacenar en caché el scaler
 def cargar_scaler():
     try:
-        with open("C:\\Users\\Miguel\\Desktop\\Interfaz Bike\\scaler.pkl", "rb") as file:
+        with open("scaler.pkl", "rb") as file:
             scaler = pickle.load(file)
         return scaler
     except FileNotFoundError:
