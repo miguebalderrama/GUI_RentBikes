@@ -3,6 +3,20 @@ import pickle
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 import requests
+from decouple import config
+
+import os
+
+
+
+print("Directorio actual:", os.getcwd())  # Muestra el directorio de trabajo actual
+try:
+    token = config("MY_API_TOKEN")
+    print("MY_API_TOKEN encontrado:", token)
+except Exception as e:
+    print("Error:", e)
+# Accede al token desde el archivo .env
+API_TOKEN = config(f"MY_API_TOKEN")
 
 
 # Cargar el modelo guardado
@@ -87,7 +101,7 @@ def get_seoul_weather(api_key):
 #st.sidebar.title("Datos en tiempo real - Seúl")
 
 # Obtener y mostrar datos en tiempo real
-api_key = "dc3167d6ef0840ea526116ab740655e4"  # Reemplaza con tu clave de API
+api_key = API_TOKEN  # Reemplaza con tu clave de API
 weather_data = get_seoul_weather(api_key)
 
 if weather_data: 
